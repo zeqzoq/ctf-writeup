@@ -1,0 +1,32 @@
+Purpose of the Script
+This script is used to explore and analyze the weights (numerical data) inside a .h5 file, which is a format used for storing neural network models. The goal is to check if any hidden messages or flags (used in CTF challenges) are embedded in the model's weights.
+
+How the Script Works
+Open the .h5 File:
+
+The script opens the .h5 file and starts looking inside for datasets. These datasets usually store the neural network's weights and biases.
+Go Through Each Dataset:
+
+It scans through all datasets in the file, one by one.
+Analyze the Data:
+
+If the data is made up of numbers (like the weights in the model), it tries to convert them into characters (using ASCII codes).
+If the data is in raw bytes, it tries to read it as a text string.
+Look for Patterns:
+
+It searches the converted text for flag patterns like flag{...} or FLAG{...}. These patterns are commonly used in CTF challenges to represent hidden secrets.
+Print Results:
+
+If any readable messages or flags are found, the script displays:
+The name of the dataset where it was found.
+The hidden message or flag.
+Why It’s Useful
+Neural network models often store large amounts of data, like weights and biases, which can be used to hide information.
+This script helps us uncover hidden information by converting the numbers stored in these datasets into readable text.
+What It Found
+When the script was run:
+
+It found the flag SHCTF24{Hidd3n_in_Th3_Lay3rs} hidden in the dataset called model_weights/dense/dense/bias:0.
+Key Takeaways
+The .h5 file isn’t just a model file; it can also be used to hide data in creative ways.
+By analyzing the weights and biases of the model, we can uncover hidden messages or CTF flags.

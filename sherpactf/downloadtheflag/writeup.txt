@@ -1,0 +1,17 @@
+┌──(zeqzoq㉿DESKTOP-TVA03PG)-[/mnt/c/Users/hzqzz/Downloads/sherpactf]
+└─$ curl -I http://52.148.100.67:30303/flag.txt
+HTTP/1.1 200 OK
+Server: nginx/1.27.2
+Date: Sat, 23 Nov 2024 05:24:48 GMT
+Content-Type: text/plain
+Content-Length: 107374182450
+Last-Modified: Sat, 23 Nov 2024 05:22:24 GMT
+Connection: keep-alive
+ETag: "67416690-1900000032"
+Accept-Ranges: bytes
+
+┌──(zeqzoq㉿DESKTOP-TVA03PG)-[/mnt/c/Users/hzqzz/Downloads/sherpactf]
+└─$ curl -r 107374182400-107374182450 http://52.148.100.67:30303/flag.txt -o final_segment.txt
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    50  100    50    0     0     16      0  0:00:03  0:00:03 --:--:--    16

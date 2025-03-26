@@ -1,0 +1,7 @@
+chatgpt said the odd one is can800
+when investigate futher, it got hex of png header.
+so extract all 800 grep "800#" chal_candump.log > can_800_messages.log
+then cut all cut -d'#' -f2 can_800_messages.log > hex_only_data.log
+cut -d'#' -f2 can_800_messages.log | tr -d '\n' > hex_only_single_line.log
+then change to png
+xxd -r -p hex_only_single_line.log > reconstructed_image.png
