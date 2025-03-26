@@ -1,0 +1,2 @@
+tail -c +872256 Your_favourite_song.mp4 > hidden_data.zip
+unzip -P apartment hidden_data.zip
